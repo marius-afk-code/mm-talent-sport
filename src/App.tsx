@@ -281,7 +281,7 @@ export default function App() {
               </div>
               <div className="flex-1 w-full rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100 flex items-center justify-center min-h-[200px]">
                 <img
-                  src="/informe-kees-smit.png"
+                  src="https://raw.githubusercontent.com/marius-afk-code/mm-talent-sport/main/informe-kees-smit.png"
                   alt="Ejemplo de Informe"
                   className="w-full h-full object-cover"
                 />
