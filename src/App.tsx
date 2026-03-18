@@ -297,7 +297,7 @@ export default function App() {
             >
               <div className="w-full flex justify-between items-start mb-8">
                 <div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-1">CV Deportivo Pedro Luna</h3>
+                  <h3 className="text-2xl font-black text-slate-900 mb-1">CV Deportivo Personalizado</h3>
                   <p className="text-slate-500 font-medium">Diseño Premium Gamificado</p>
                 </div>
                 <div className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-bold">
