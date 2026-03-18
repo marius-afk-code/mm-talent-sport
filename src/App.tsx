@@ -283,7 +283,7 @@ export default function App() {
                 <img
                   src="https://raw.githubusercontent.com/marius-afk-code/mm-talent-sport/main/informe-kees-smit.png"
                   alt="Ejemplo de Informe"
-                  className="w-full h-full object-cover"
+                  className="w-full object-contain"
                 />
               </div>
             </motion.div>
