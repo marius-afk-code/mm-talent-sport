@@ -254,7 +254,7 @@ function HomePage() {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-[#d4a853]/10 via-transparent to-[#7c3aed]/10 pointer-events-none"></div>
             <div className="relative z-10">
-              <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6">
+              <h2 className="text-3xl sm:text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6">
                 NUESTRAS <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4a853] to-[#7c3aed]">PLATAFORMAS.</span>
               </h2>
@@ -609,7 +609,7 @@ function EcosistemaPage() {
             transition={{ duration: 0.8 }}
             className="mb-16"
           >
-            <h1 className="text-5xl md:text-7xl font-black text-slate-900 leading-[0.9] tracking-tighter mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-black text-slate-900 leading-[0.9] tracking-tighter mb-6">
               NUESTRAS <br />
               <span className="text-gradient">PLATAFORMAS.</span>
             </h1>
