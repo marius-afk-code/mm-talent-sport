@@ -22,37 +22,37 @@ const services = [
   {
     title: "Informe Individual",
     price: "45€",
-    icon: <FileText className="w-8 h-8 text-blue-600" />,
+    icon: <FileText className="w-8 h-8 text-[#d4a853]" />,
     description: "Análisis detallado de un jugador con métricas clave y evaluación táctica."
   },
   {
     title: "CV Premium",
     price: "60€",
-    icon: <Activity className="w-8 h-8 text-indigo-600" />,
+    icon: <Activity className="w-8 h-8 text-[#d4a853]" />,
     description: "Diseño profesional de currículum deportivo destacando estadísticas y logros."
   },
   {
     title: "Videoanálisis Pack",
     price: "120€",
-    icon: <Video className="w-8 h-8 text-violet-600" />,
+    icon: <Video className="w-8 h-8 text-[#7c3aed]" />,
     description: "Cortes de video tácticos. Extras: Videocurrículum (+80€), Clips RRSS (+50€)."
   },
   {
     title: "Dashboard PowerBI",
     price: "250€",
-    icon: <BarChart3 className="w-8 h-8 text-blue-500" />,
+    icon: <BarChart3 className="w-8 h-8 text-[#d4a853]" />,
     description: "Visualización interactiva con Web Scraping oficial de actas federativas."
   },
   {
     title: "Scout Presencial",
     price: "75€/partido",
-    icon: <MapPin className="w-8 h-8 text-indigo-500" />,
+    icon: <MapPin className="w-8 h-8 text-[#d4a853]" />,
     description: "Cobertura en Andalucía Oeste, Murcia y Sur de Valencia. Informes en vivo."
   },
   {
     title: "Consultoría Continua",
     price: "600€/mes",
-    icon: <Shield className="w-8 h-8 text-violet-500" />,
+    icon: <Shield className="w-8 h-8 text-[#7c3aed]" />,
     description: "Servicio integral: scouting, análisis de rivales y consultoría de datos continua."
   }
 ];
@@ -173,7 +173,7 @@ function HomePage() {
   };
 
   return (
-    <div className="min-h-screen mesh-bg font-sans selection:bg-indigo-200 selection:text-indigo-900">
+    <div className="min-h-screen mesh-bg font-sans selection:bg-[#d4a853]/20 selection:text-slate-900">
 
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass-panel border-b-0 border-white/20">
@@ -182,7 +182,7 @@ function HomePage() {
             <BrandLogo />
             <div className="flex flex-col leading-none">
               <span className="text-2xl font-black tracking-tighter text-slate-900">
-                VOLEA TALENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">SPORT</span>
+                VOLEA TALENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4a853] to-[#7c3aed]">SPORT</span>
               </span>
               <span className="text-[0.65rem] tracking-[0.2em] text-slate-500 font-bold uppercase mt-1">
                 TALENT SPORT
@@ -190,11 +190,11 @@ function HomePage() {
             </div>
           </a>
           <div className="hidden md:flex items-center gap-8 font-semibold text-slate-600">
-            <a href="#portfolio" className="hover:text-indigo-600 transition-colors">Análisis</a>
-            <a href="#servicios" className="hover:text-indigo-600 transition-colors">Servicios</a>
-            <a href="#powerbi" className="hover:text-indigo-600 transition-colors">PowerBI</a>
-            <Link to="/ecosistema" className="hover:text-indigo-600 transition-colors">Plataforma</Link>
-            <a href="#contacto" className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-indigo-600 transition-colors">Contactar</a>
+            <a href="#portfolio" className="hover:text-[#d4a853] transition-colors">Análisis</a>
+            <a href="#servicios" className="hover:text-[#d4a853] transition-colors">Servicios</a>
+            <a href="#powerbi" className="hover:text-[#d4a853] transition-colors">PowerBI</a>
+            <Link to="/ecosistema" className="hover:text-[#d4a853] transition-colors">Plataforma</Link>
+            <a href="#contacto" className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-[#d4a853] hover:text-slate-900 transition-colors">Contactar</a>
           </div>
         </div>
       </nav>
@@ -225,7 +225,7 @@ function HomePage() {
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 href="#servicios"
-                className="bg-indigo-600 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200 flex items-center gap-2"
+                className="bg-[#d4a853] text-slate-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-[#b8923e] transition-all shadow-lg shadow-[#d4a853]/30 flex items-center gap-2"
               >
                 Ver Servicios <ChevronRight className="w-5 h-5" />
               </motion.a>
@@ -252,18 +252,18 @@ function HomePage() {
             transition={{ duration: 0.7 }}
             className="glass-panel-dark rounded-[3rem] p-16 text-white text-center relative overflow-hidden"
           >
-            <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-transparent to-violet-600/20 pointer-events-none"></div>
+            <div className="absolute inset-0 bg-gradient-to-br from-[#d4a853]/10 via-transparent to-[#7c3aed]/10 pointer-events-none"></div>
             <div className="relative z-10">
               <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6">
                 NUESTRAS <br />
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">PLATAFORMAS.</span>
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4a853] to-[#7c3aed]">PLATAFORMAS.</span>
               </h2>
               <p className="text-xl text-slate-300 font-medium mb-10 max-w-xl mx-auto leading-relaxed">
                 Herramientas profesionales para el fútbol base y el scouting de élite.
               </p>
               <Link
                 to="/ecosistema"
-                className="inline-flex items-center gap-2 bg-indigo-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-900/40"
+                className="inline-flex items-center gap-2 bg-[#d4a853] text-slate-900 px-10 py-4 rounded-full font-bold text-lg hover:bg-[#b8923e] transition-all shadow-lg shadow-black/40"
               >
                 Explorar plataformas <ChevronRight className="w-5 h-5" />
               </Link>
@@ -293,7 +293,7 @@ function HomePage() {
                   <h3 className="text-2xl font-black text-slate-900 mb-1">Informes</h3>
                   <p className="text-slate-500 font-medium">Análisis de Rendimiento y Scouting</p>
                 </div>
-                <div className="bg-indigo-100 text-indigo-700 px-3 py-1 rounded-full text-sm font-bold">
+                <div className="bg-[#7c3aed]/10 text-[#7c3aed] px-3 py-1 rounded-full text-sm font-bold">
                   Scouting
                 </div>
               </div>
@@ -318,7 +318,7 @@ function HomePage() {
                   <h3 className="text-2xl font-black text-slate-900 mb-1">CV Deportivo Personalizado</h3>
                   <p className="text-slate-500 font-medium">Diseño Premium Gamificado</p>
                 </div>
-                <div className="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-bold">
+                <div className="bg-[#d4a853]/15 text-[#b8923e] px-3 py-1 rounded-full text-sm font-bold">
                   Premium
                 </div>
               </div>
@@ -348,7 +348,7 @@ function HomePage() {
                   {service.icon}
                 </div>
                 <h3 className="text-2xl font-bold text-slate-900 mb-2">{service.title}</h3>
-                <div className="text-2xl font-black text-indigo-600 mb-4">{service.price}</div>
+                <div className="text-2xl font-black text-[#d4a853] mb-4">{service.price}</div>
                 <p className="text-slate-600 font-medium leading-relaxed">{service.description}</p>
               </motion.div>
             ))}
@@ -372,24 +372,24 @@ function HomePage() {
                 transition={{ duration: 0.4 }}
                 className="premium-glass rounded-[2.5rem] p-10 relative overflow-hidden group"
               >
-                <div className={`absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl -mr-10 -mt-10 transition-transform group-hover:scale-150 ${pkg.color === 'indigo' ? 'bg-indigo-500/10' : 'bg-violet-500/10'}`}></div>
+                <div className={`absolute top-0 right-0 w-48 h-48 rounded-full blur-3xl -mr-10 -mt-10 transition-transform group-hover:scale-150 ${pkg.color === 'indigo' ? 'bg-[#d4a853]/10' : 'bg-[#7c3aed]/10'}`}></div>
                 <h3 className="text-3xl font-black text-slate-900 mb-2 relative z-10">{pkg.title}</h3>
                 <p className="text-slate-600 font-medium mb-6 relative z-10">{pkg.description}</p>
                 <div className="flex items-baseline gap-3 mb-8 relative z-10">
-                  <span className="text-5xl font-black text-indigo-600 tracking-tighter">{pkg.price}</span>
+                  <span className="text-5xl font-black text-[#d4a853] tracking-tighter">{pkg.price}</span>
                   {pkg.originalPrice && <span className="text-xl text-slate-400 line-through font-bold">{pkg.originalPrice}</span>}
                 </div>
                 <ul className="space-y-4 mb-10 relative z-10">
                   {pkg.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-3 text-slate-700 font-semibold">
-                      <div className="w-6 h-6 rounded-full bg-indigo-100 flex items-center justify-center text-indigo-600 shrink-0">
+                      <div className="w-6 h-6 rounded-full bg-[#d4a853]/15 flex items-center justify-center text-[#d4a853] shrink-0">
                         <Target className="w-4 h-4" />
                       </div>
                       {feature}
                     </li>
                   ))}
                 </ul>
-                <a href="#contacto" className="block w-full text-center bg-slate-900 text-white py-4 rounded-2xl font-bold text-lg hover:bg-indigo-600 transition-colors shadow-lg relative z-10">
+                <a href="#contacto" className="block w-full text-center bg-slate-900 text-white py-4 rounded-2xl font-bold text-lg hover:bg-[#d4a853] hover:text-slate-900 transition-colors shadow-lg relative z-10">
                   Solicitar Paquete
                 </a>
               </motion.div>
@@ -458,7 +458,7 @@ function HomePage() {
                           </BarChart>
                         </ResponsiveContainer>
                       </div>
-                      <div className="h-32 bg-indigo-600/20 rounded-xl border border-indigo-500/30"></div>
+                      <div className="h-32 bg-[#d4a853]/10 rounded-xl border border-[#d4a853]/20"></div>
                     </div>
                   </div>
                 </div>
@@ -480,7 +480,7 @@ function HomePage() {
                   type="text"
                   value={form.name}
                   onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/50 hover:bg-white/80 hover:border-indigo-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/50 hover:bg-white/80 hover:border-[#d4a853]/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#d4a853] transition-all duration-300"
                   placeholder="Tu nombre"
                 />
               </div>
@@ -490,7 +490,7 @@ function HomePage() {
                   type="email"
                   value={form.email}
                   onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
-                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/50 hover:bg-white/80 hover:border-indigo-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+                  className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/50 hover:bg-white/80 hover:border-[#d4a853]/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#d4a853] transition-all duration-300"
                   placeholder="tu@email.com"
                 />
               </div>
@@ -500,7 +500,7 @@ function HomePage() {
               <select
                 value={form.service}
                 onChange={e => setForm(f => ({ ...f, service: e.target.value }))}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/50 hover:bg-white/80 hover:border-indigo-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/50 hover:bg-white/80 hover:border-[#d4a853]/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#d4a853] transition-all duration-300"
               >
                 <option>Informe Individual</option>
                 <option>CV Premium</option>
@@ -517,7 +517,7 @@ function HomePage() {
                 rows={4}
                 value={form.message}
                 onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
-                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/50 hover:bg-white/80 hover:border-indigo-300 focus:bg-white focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-all duration-300"
+                className="w-full px-4 py-3 rounded-xl border border-slate-200 bg-white/50 hover:bg-white/80 hover:border-[#d4a853]/50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-[#d4a853] transition-all duration-300"
                 placeholder="Cuéntanos sobre tu proyecto..."
               ></textarea>
             </div>
@@ -537,7 +537,7 @@ function HomePage() {
               type="button"
               onClick={handleSubmit}
               disabled={formState === 'sending'}
-              className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-indigo-600 hover:shadow-lg hover:shadow-indigo-500/30 hover:-translate-y-1 transition-all duration-300 mt-4 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+              className="bg-slate-900 text-white px-8 py-4 rounded-xl font-bold text-lg hover:bg-[#d4a853] hover:text-slate-900 hover:shadow-lg hover:shadow-[#d4a853]/30 hover:-translate-y-1 transition-all duration-300 mt-4 flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
             >
               {formState === 'sending' ? 'Enviando...' : (<>Enviar Mensaje <Send className="w-5 h-5" /></>)}
             </button>
@@ -575,7 +575,7 @@ function HomePage() {
 
 function EcosistemaPage() {
   return (
-    <div className="min-h-screen mesh-bg font-sans selection:bg-indigo-200 selection:text-indigo-900">
+    <div className="min-h-screen mesh-bg font-sans selection:bg-[#d4a853]/20 selection:text-slate-900">
 
       {/* Navbar */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass-panel border-b-0 border-white/20">
@@ -584,7 +584,7 @@ function EcosistemaPage() {
             <BrandLogo />
             <div className="flex flex-col leading-none">
               <span className="text-2xl font-black tracking-tighter text-slate-900">
-                VOLEA TALENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">SPORT</span>
+                VOLEA TALENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#d4a853] to-[#7c3aed]">SPORT</span>
               </span>
               <span className="text-[0.65rem] tracking-[0.2em] text-slate-500 font-bold uppercase mt-1">
                 TALENT SPORT
@@ -592,11 +592,11 @@ function EcosistemaPage() {
             </div>
           </Link>
           <div className="hidden md:flex items-center gap-8 font-semibold text-slate-600">
-            <Link to="/#portfolio" className="hover:text-indigo-600 transition-colors">Análisis</Link>
-            <Link to="/#servicios" className="hover:text-indigo-600 transition-colors">Servicios</Link>
-            <Link to="/#powerbi" className="hover:text-indigo-600 transition-colors">PowerBI</Link>
-            <Link to="/ecosistema" className="text-indigo-600 transition-colors">Plataforma</Link>
-            <Link to="/#contacto" className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-indigo-600 transition-colors">Contactar</Link>
+            <Link to="/#portfolio" className="hover:text-[#d4a853] transition-colors">Análisis</Link>
+            <Link to="/#servicios" className="hover:text-[#d4a853] transition-colors">Servicios</Link>
+            <Link to="/#powerbi" className="hover:text-[#d4a853] transition-colors">PowerBI</Link>
+            <Link to="/ecosistema" className="text-[#d4a853] transition-colors">Plataforma</Link>
+            <Link to="/#contacto" className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-[#d4a853] hover:text-slate-900 transition-colors">Contactar</Link>
           </div>
         </div>
       </nav>
@@ -629,7 +629,7 @@ function EcosistemaPage() {
             >
               <div className="flex items-start justify-between">
                 <div className="w-14 h-14 rounded-2xl bg-white/80 flex items-center justify-center shadow-sm">
-                  <Target className="w-7 h-7 text-indigo-600" />
+                  <Target className="w-7 h-7 text-[#7c3aed]" />
                 </div>
                 <span className="bg-green-100 text-green-700 text-sm font-bold px-3 py-1 rounded-full border border-green-200">
                   Activo
@@ -645,7 +645,7 @@ function EcosistemaPage() {
                 href="https://voleascouting.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="mt-auto flex items-center justify-center gap-2 bg-indigo-600 text-white px-6 py-3.5 rounded-2xl font-bold text-base hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200"
+                className="mt-auto flex items-center justify-center gap-2 bg-[#7c3aed] text-white px-6 py-3.5 rounded-2xl font-bold text-base hover:bg-[#6d28d9] transition-all shadow-lg shadow-[#7c3aed]/20"
               >
                 Acceder <ExternalLink className="w-4 h-4" />
               </a>
@@ -660,7 +660,7 @@ function EcosistemaPage() {
             >
               <div className="flex items-start justify-between">
                 <div className="w-14 h-14 rounded-2xl bg-white/80 flex items-center justify-center shadow-sm">
-                  <TrendingUp className="w-7 h-7 text-violet-600" />
+                  <TrendingUp className="w-7 h-7 text-[#22d3ee]" />
                 </div>
                 <span className="bg-orange-100 text-orange-700 text-sm font-bold px-3 py-1 rounded-full border border-orange-200">
                   En desarrollo
