@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
+import { Routes, Route, Link } from 'react-router-dom';
 import { motion } from 'motion/react';
 import {
   BarChart3, FileText, Video, Database, MapPin,
   MessageCircle, Send, ChevronRight, Activity, Shield,
-  TrendingUp, Target, Crosshair
+  TrendingUp, Target, Crosshair, ExternalLink
 } from 'lucide-react';
 import {
   ResponsiveContainer, BarChart, Bar
@@ -76,20 +77,8 @@ const premiumPackages = [
 ];
 
 const BrandLogo = () => (
-  <div className="relative group-hover:scale-105 transition-transform duration-300">
-    <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 to-violet-600 rounded-xl blur opacity-30 group-hover:opacity-70 transition duration-300"></div>
-    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg" className="relative shadow-xl rounded-xl">
-      <rect width="42" height="42" rx="12" fill="url(#logo-bg)" />
-      <path d="M10 28V14L16 21L22 14V28" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="M19 28V14L25 21L31 14V28" stroke="rgba(255,255,255,0.4)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" />
-      <circle cx="31" cy="14" r="3" fill="#38BDF8" />
-      <defs>
-        <linearGradient id="logo-bg" x1="0" y1="0" x2="42" y2="42" gradientUnits="userSpaceOnUse">
-          <stop stopColor="#0F172A" />
-          <stop offset="1" stopColor="#312E81" />
-        </linearGradient>
-      </defs>
-    </svg>
+  <div className="group-hover:scale-105 transition-transform duration-300">
+    <img src="/logo-volea-icon.png" alt="Volea" height={56} style={{ height: '56px', width: 'auto' }} />
   </div>
 );
 
@@ -153,7 +142,7 @@ const CalendlyWidget = () => {
 
 type FormState = 'idle' | 'sending' | 'success' | 'error';
 
-export default function App() {
+function HomePage() {
   const [form, setForm] = useState({ name: '', email: '', service: 'Informe Individual', message: '' });
   const [formState, setFormState] = useState<FormState>('idle');
 
@@ -169,7 +158,7 @@ export default function App() {
           email: form.email,
           servicio: form.service,
           mensaje: form.message,
-          _subject: `Nuevo contacto MM Talent Sport - ${form.service}`,
+          _subject: `Nuevo contacto Volea Talent Sport - ${form.service}`,
         }),
       });
       if (res.ok) {
@@ -193,10 +182,10 @@ export default function App() {
             <BrandLogo />
             <div className="flex flex-col leading-none">
               <span className="text-2xl font-black tracking-tighter text-slate-900">
-                MM TALENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">SPORT</span>
+                VOLEA TALENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">SPORT</span>
               </span>
               <span className="text-[0.65rem] tracking-[0.2em] text-slate-500 font-bold uppercase mt-1">
-                Scouting & Analytics
+                TALENT SPORT
               </span>
             </div>
           </a>
@@ -204,6 +193,7 @@ export default function App() {
             <a href="#portfolio" className="hover:text-indigo-600 transition-colors">Análisis</a>
             <a href="#servicios" className="hover:text-indigo-600 transition-colors">Servicios</a>
             <a href="#powerbi" className="hover:text-indigo-600 transition-colors">PowerBI</a>
+            <Link to="/ecosistema" className="hover:text-indigo-600 transition-colors">Plataforma</Link>
             <a href="#contacto" className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-indigo-600 transition-colors">Contactar</a>
           </div>
         </div>
@@ -249,6 +239,34 @@ export default function App() {
               >
                 <MessageCircle className="w-5 h-5 text-green-500" /> WhatsApp
               </motion.a>
+            </div>
+          </motion.div>
+        </section>
+
+        {/* Plataformas CTA */}
+        <section className="max-w-7xl mx-auto px-6 mb-32">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.7 }}
+            className="glass-panel-dark rounded-[3rem] p-16 text-white text-center relative overflow-hidden"
+          >
+            <div className="absolute inset-0 bg-gradient-to-br from-indigo-600/20 via-transparent to-violet-600/20 pointer-events-none"></div>
+            <div className="relative z-10">
+              <h2 className="text-5xl md:text-7xl font-black tracking-tighter leading-[0.9] mb-6">
+                NUESTRAS <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-violet-400">PLATAFORMAS.</span>
+              </h2>
+              <p className="text-xl text-slate-300 font-medium mb-10 max-w-xl mx-auto leading-relaxed">
+                Herramientas profesionales para el fútbol base y el scouting de élite.
+              </p>
+              <Link
+                to="/ecosistema"
+                className="inline-flex items-center gap-2 bg-indigo-600 text-white px-10 py-4 rounded-full font-bold text-lg hover:bg-indigo-500 transition-all shadow-lg shadow-indigo-900/40"
+              >
+                Explorar plataformas <ChevronRight className="w-5 h-5" />
+              </Link>
             </div>
           </motion.div>
         </section>
@@ -534,6 +552,7 @@ export default function App() {
             </div>
           </div>
         </section>
+
       </main>
 
       {/* Floating WhatsApp Button */}
@@ -548,8 +567,135 @@ export default function App() {
 
       {/* Footer */}
       <footer className="border-t border-slate-200/50 py-12 text-center text-slate-500 font-medium">
-        <p>© {new Date().getFullYear()} MM Talent Sport. Todos los derechos reservados.</p>
+        <p>© {new Date().getFullYear()} Volea Talent Sport. Todos los derechos reservados.</p>
       </footer>
     </div>
+  );
+}
+
+function EcosistemaPage() {
+  return (
+    <div className="min-h-screen mesh-bg font-sans selection:bg-indigo-200 selection:text-indigo-900">
+
+      {/* Navbar */}
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-panel border-b-0 border-white/20">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+          <Link to="/" className="flex items-center gap-3 group">
+            <BrandLogo />
+            <div className="flex flex-col leading-none">
+              <span className="text-2xl font-black tracking-tighter text-slate-900">
+                VOLEA TALENT <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-violet-600">SPORT</span>
+              </span>
+              <span className="text-[0.65rem] tracking-[0.2em] text-slate-500 font-bold uppercase mt-1">
+                TALENT SPORT
+              </span>
+            </div>
+          </Link>
+          <div className="hidden md:flex items-center gap-8 font-semibold text-slate-600">
+            <Link to="/#portfolio" className="hover:text-indigo-600 transition-colors">Análisis</Link>
+            <Link to="/#servicios" className="hover:text-indigo-600 transition-colors">Servicios</Link>
+            <Link to="/#powerbi" className="hover:text-indigo-600 transition-colors">PowerBI</Link>
+            <Link to="/ecosistema" className="text-indigo-600 transition-colors">Plataforma</Link>
+            <Link to="/#contacto" className="bg-slate-900 text-white px-6 py-2.5 rounded-full hover:bg-indigo-600 transition-colors">Contactar</Link>
+          </div>
+        </div>
+      </nav>
+
+      <main className="pt-32 pb-24">
+        <section className="max-w-5xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mb-16"
+          >
+            <h1 className="text-5xl md:text-7xl font-black text-slate-900 leading-[0.9] tracking-tighter mb-6">
+              NUESTRAS <br />
+              <span className="text-gradient">PLATAFORMAS.</span>
+            </h1>
+            <p className="text-xl text-slate-600 font-medium max-w-2xl leading-relaxed">
+              Herramientas profesionales para el fútbol base y el scouting de élite.
+            </p>
+          </motion.div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Volea Scouting */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              whileHover={{ y: -8 }}
+              className="service-glass rounded-3xl p-10 flex flex-col gap-6"
+            >
+              <div className="flex items-start justify-between">
+                <div className="w-14 h-14 rounded-2xl bg-white/80 flex items-center justify-center shadow-sm">
+                  <Target className="w-7 h-7 text-indigo-600" />
+                </div>
+                <span className="bg-green-100 text-green-700 text-sm font-bold px-3 py-1 rounded-full border border-green-200">
+                  Activo
+                </span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-black text-slate-900 mb-3">Volea Scouting</h2>
+                <p className="text-slate-600 font-medium leading-relaxed">
+                  Plataforma profesional de scouting de fútbol. Gestiona jugadores, registra partidos y genera informes profesionales.
+                </p>
+              </div>
+              <a
+                href="https://voleascouting.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-auto flex items-center justify-center gap-2 bg-indigo-600 text-white px-6 py-3.5 rounded-2xl font-bold text-base hover:bg-indigo-700 transition-all shadow-lg shadow-indigo-200"
+              >
+                Acceder <ExternalLink className="w-4 h-4" />
+              </a>
+            </motion.div>
+
+            {/* Volea Training */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.2 }}
+              className="service-glass rounded-3xl p-10 flex flex-col gap-6 opacity-80"
+            >
+              <div className="flex items-start justify-between">
+                <div className="w-14 h-14 rounded-2xl bg-white/80 flex items-center justify-center shadow-sm">
+                  <TrendingUp className="w-7 h-7 text-violet-600" />
+                </div>
+                <span className="bg-orange-100 text-orange-700 text-sm font-bold px-3 py-1 rounded-full border border-orange-200">
+                  En desarrollo
+                </span>
+              </div>
+              <div>
+                <h2 className="text-2xl font-black text-slate-900 mb-3">Volea Training</h2>
+                <p className="text-slate-600 font-medium leading-relaxed">
+                  Planificación de entrenamientos asistida por IA para entrenadores de fútbol base.
+                </p>
+              </div>
+              <button
+                disabled
+                className="mt-auto flex items-center justify-center gap-2 bg-slate-200 text-slate-400 px-6 py-3.5 rounded-2xl font-bold text-base cursor-not-allowed"
+              >
+                Próximamente
+              </button>
+            </motion.div>
+          </div>
+        </section>
+      </main>
+
+      {/* Footer */}
+      <footer className="border-t border-slate-200/50 py-12 text-center text-slate-500 font-medium">
+        <p>© {new Date().getFullYear()} Volea Talent Sport. Todos los derechos reservados.</p>
+      </footer>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+      <Route path="/ecosistema" element={<EcosistemaPage />} />
+    </Routes>
   );
 }
