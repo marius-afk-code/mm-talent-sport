@@ -322,7 +322,11 @@ function HomePage() {
                   Premium
                 </div>
               </div>
-              <FIFACard />
+              <img
+                src="/cv-ejemplo.jpg"
+                alt="CV Deportivo de ejemplo"
+                style={{ width: '100%', objectFit: 'contain', borderRadius: '12px' }}
+              />
             </motion.div>
           </div>
         </section>
