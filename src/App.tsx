@@ -82,43 +82,6 @@ const BrandLogo = () => (
   </div>
 );
 
-const FIFACard = () => (
-  <motion.div
-    whileHover={{ scale: 1.05, rotateY: 10 }}
-    className="relative w-72 h-[420px] rounded-3xl p-4 flex flex-col items-center justify-between shadow-2xl overflow-hidden bg-gradient-to-br from-amber-200 via-yellow-400 to-amber-600 border-2 border-yellow-300 mx-auto"
-  >
-    <div className="absolute top-0 left-0 w-full h-full opacity-20 mix-blend-overlay"
-      style={{ backgroundImage: "url('https://www.transparenttextures.com/patterns/cubes.png')" }}
-    ></div>
-
-    <div className="relative z-10 flex w-full justify-between items-start px-2 pt-2">
-      <div className="flex flex-col items-center">
-        <span className="text-5xl font-black text-slate-900 tracking-tighter">88</span>
-        <span className="text-lg font-bold text-slate-800 -mt-1">MC</span>
-      </div>
-      <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center shadow-inner">
-        <span className="font-bold text-sm">ESP</span>
-      </div>
-    </div>
-
-    <div className="relative z-10 w-40 h-40 rounded-full border-4 border-white/50 overflow-hidden shadow-lg mb-2 bg-white">
-      <img src="https://picsum.photos/seed/pedroluna/200/200" alt="Pedro Luna" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-    </div>
-
-    <div className="relative z-10 text-center w-full">
-      <h3 className="text-3xl font-black text-slate-900 uppercase tracking-wider mb-1">Luna</h3>
-      <div className="h-px w-full bg-slate-900/20 my-2"></div>
-      <div className="grid grid-cols-2 gap-x-6 gap-y-1 text-sm font-bold text-slate-800 px-4">
-        <div className="flex justify-between"><span>82</span> <span className="opacity-70">PAC</span></div>
-        <div className="flex justify-between"><span>89</span> <span className="opacity-70">DRI</span></div>
-        <div className="flex justify-between"><span>78</span> <span className="opacity-70">SHO</span></div>
-        <div className="flex justify-between"><span>65</span> <span className="opacity-70">DEF</span></div>
-        <div className="flex justify-between"><span>91</span> <span className="opacity-70">PAS</span></div>
-        <div className="flex justify-between"><span>72</span> <span className="opacity-70">PHY</span></div>
-      </div>
-    </div>
-  </motion.div>
-);
 
 const CalendlyWidget = () => {
   useEffect(() => {
