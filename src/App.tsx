@@ -273,68 +273,26 @@ function HomePage() {
 
         {/* Portfolio Section */}
         <section id="portfolio" className="max-w-7xl mx-auto px-6 mb-32">
-          <div className="mb-16">
-            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">Galería de Análisis</h2>
-            <p className="text-xl text-slate-600">Ejemplos de nuestros informes y visualizaciones premium.</p>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-8">
-            {/* Informes */}
-            <motion.div
-              initial={{ opacity: 0, x: -30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.3 }}
-              className="glass-panel rounded-3xl p-8 flex flex-col cursor-pointer"
-              style={{ height: '500px' }}
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="glass-panel rounded-3xl px-12 py-16 text-center"
+          >
+            <h2 className="text-4xl md:text-5xl font-black text-slate-900 tracking-tight mb-4">
+              ¿Quieres ver el trabajo real?
+            </h2>
+            <p className="text-xl text-slate-600 font-medium max-w-2xl mx-auto mb-10 leading-relaxed">
+              Contacta y te muestro informes, CVs deportivos y análisis reales con los que hemos trabajado.
+            </p>
+            <a
+              href="#contacto"
+              className="inline-block bg-slate-900 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-[#d4a853] hover:text-slate-900 transition-colors shadow-lg"
             >
-              <div className="flex justify-between items-start mb-8">
-                <div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-1">Informes</h3>
-                  <p className="text-slate-500 font-medium">Análisis de Rendimiento y Scouting</p>
-                </div>
-                <div className="bg-[#7c3aed]/10 text-[#7c3aed] px-3 py-1 rounded-full text-sm font-bold">
-                  Scouting
-                </div>
-              </div>
-              <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100" style={{ flex: 1 }}>
-                <img
-                  src="https://raw.githubusercontent.com/marius-afk-code/mm-talent-sport/main/informe-kees-smit.png"
-                  alt="Ejemplo de Informe"
-                  className="w-full h-full"
-                  style={{ objectFit: 'cover', objectPosition: 'top' }}
-                />
-              </div>
-            </motion.div>
-
-            {/* Pedro Luna CV */}
-            <motion.div
-              initial={{ opacity: 0, x: 30 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              className="glass-panel rounded-3xl p-8 flex flex-col bg-gradient-to-br from-slate-50 to-slate-100"
-              style={{ height: '500px' }}
-            >
-              <div className="w-full flex justify-between items-start mb-8">
-                <div>
-                  <h3 className="text-2xl font-black text-slate-900 mb-1">CV Deportivo Personalizado</h3>
-                  <p className="text-slate-500 font-medium">Diseño Premium Gamificado</p>
-                </div>
-                <div className="bg-[#d4a853]/15 text-[#b8923e] px-3 py-1 rounded-full text-sm font-bold">
-                  Premium
-                </div>
-              </div>
-              <div className="w-full rounded-2xl overflow-hidden border border-slate-200" style={{ flex: 1 }}>
-                <img
-                  src="/cv-ejemplo.jpg"
-                  alt="CV Deportivo de ejemplo"
-                  className="w-full h-full"
-                  style={{ objectFit: 'cover', objectPosition: 'top' }}
-                />
-              </div>
-            </motion.div>
-          </div>
+              Contactar
+            </a>
+          </motion.div>
         </section>
 
         {/* Services Grid */}
