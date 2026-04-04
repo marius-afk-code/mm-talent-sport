@@ -287,6 +287,7 @@ function HomePage() {
               whileHover={{ scale: 1.02 }}
               transition={{ duration: 0.3 }}
               className="glass-panel rounded-3xl p-8 flex flex-col cursor-pointer"
+              style={{ height: '500px' }}
             >
               <div className="flex justify-between items-start mb-8">
                 <div>
@@ -297,11 +298,12 @@ function HomePage() {
                   Scouting
                 </div>
               </div>
-              <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100 flex items-center justify-center">
+              <div className="w-full rounded-2xl overflow-hidden border border-slate-200 shadow-inner bg-slate-100" style={{ flex: 1 }}>
                 <img
                   src="https://raw.githubusercontent.com/marius-afk-code/mm-talent-sport/main/informe-kees-smit.png"
                   alt="Ejemplo de Informe"
-                  className="w-full h-auto object-contain"
+                  className="w-full h-full"
+                  style={{ objectFit: 'cover', objectPosition: 'top' }}
                 />
               </div>
             </motion.div>
@@ -311,7 +313,8 @@ function HomePage() {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="glass-panel rounded-3xl p-8 flex flex-col items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100"
+              className="glass-panel rounded-3xl p-8 flex flex-col bg-gradient-to-br from-slate-50 to-slate-100"
+              style={{ height: '500px' }}
             >
               <div className="w-full flex justify-between items-start mb-8">
                 <div>
@@ -322,11 +325,14 @@ function HomePage() {
                   Premium
                 </div>
               </div>
-              <img
-                src="/cv-ejemplo.jpg"
-                alt="CV Deportivo de ejemplo"
-                style={{ width: '100%', objectFit: 'contain', borderRadius: '12px' }}
-              />
+              <div className="w-full rounded-2xl overflow-hidden border border-slate-200" style={{ flex: 1 }}>
+                <img
+                  src="/cv-ejemplo.jpg"
+                  alt="CV Deportivo de ejemplo"
+                  className="w-full h-full"
+                  style={{ objectFit: 'cover', objectPosition: 'top' }}
+                />
+              </div>
             </motion.div>
           </div>
         </section>
